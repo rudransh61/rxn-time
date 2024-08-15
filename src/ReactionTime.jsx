@@ -40,17 +40,23 @@ const ReactionTime = () => {
     };
 
     return (
-        <div className="text-center mt-5">
-            <h1>Reaction Time Tester</h1>
+        <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+            <h1 className="text-center mb-4">Reaction Time Tester</h1>
             <button
                 onClick={handleClick}
                 className={buttonClass}
-                style={{ width: '300px', height: '300px', fontSize: '24px' }}
+                style={{
+                    width: '80%',
+                    maxWidth: '300px',
+                    height: '80%',
+                    maxHeight: '300px',
+                    fontSize: '1.5rem'
+                }}
             >
                 {buttonText}
             </button>
             {reactionTime && (
-                <div className="mt-3">
+                <div className="mt-4">
                     <h2>Your Reaction Time: {reactionTime} ms</h2>
                 </div>
             )}
